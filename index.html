@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        :root,
+        html,
+        body {
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="time"></span>
+</body>
+
+<script>
+    let timeElem = document.getElementById("time");
+
+    const updateTime = () => {
+        let currTime = new Date().toLocaleTimeString();
+        timeElem.innerHTML = currTime;
+    }
+
+    updateTime();
+    setInterval(() => {
+        updateTime();
+    }, 1000);
+</script>
+
+</html>
